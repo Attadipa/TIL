@@ -1,4 +1,4 @@
-#TwoPointers & Sliding window
+# 연속된 자연수의 합
 
 TwoPointers와 Sliding window을 모두 사용한 복합문제이다 
 for문의 i만 사용하면 굉장히 풀기 어렵다. Pointer를 적절히 사용해야 한다.
