@@ -1,10 +1,9 @@
 #연속부분수열
-TwoPointers와 Sliding window을 모두 사용하는 복합문제이다 
+TwoPointers와 Sliding window을 모두 사용하는 복합문제
 
 해설
 
-<pre>
-<code>
+```java
 import java.util.Scanner;
 
 public class Main {
@@ -35,13 +34,11 @@ public class Main {
 		System.out.println(Solution(n,k,arr));
 	} 
 }
-</code>
-</pre>
+```
 
 내 풀이
 
-<pre>
-<code>
+```java
 import java.util.Scanner;
 
 public class Main {
@@ -73,5 +70,4 @@ public class Main {
 		System.out.println(Solution(n,k,arr));
 	} 
 }
-</code>
-</pre>
+```
