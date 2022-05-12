@@ -35,7 +35,7 @@ body : 웹브라우저에 실제로 나타나는 내용
 
 3. h1에 소제목
 
-```
+```html
 <!DOCTYPE html>
 <html lang="ko">
 <head>
