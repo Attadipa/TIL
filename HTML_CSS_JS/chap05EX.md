@@ -172,6 +172,5 @@ button : 버튼 생성
   <input type="date" min="2022-05-07" max="2022-05-28">
   <input type="time" min="14:00" max="16:00">
 </body>
-
 </html>
 ```
