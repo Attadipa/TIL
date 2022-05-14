@@ -2,11 +2,10 @@
 
 HashMap과 sliding window 복합문제  
 
-내 풀이
+### 내 풀이
 
-1.isEquals()를 통해 map간의 비교가 가능하다는 걸 알게되었음
-
-2.불필요한 연산을 줄이자. ex) s1의 char배열화
+1.isEquals()를 통해 map간의 비교가 가능하다는 걸 알게되었음  
+2.불필요한 연산을 줄이자. ex) s1의 char배열화  
 
 
 ```java
@@ -53,7 +52,7 @@ public class Main {
 }
 ```
 
-해설
+### 해설
 
 ```java
 import java.util.HashMap;
