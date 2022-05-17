@@ -1,0 +1,133 @@
+# 데이터 조작어(DML) - 연산자
+
+연산자 종류
+
+    =                   : 같다
+    !=, ^=, <>          : 같지않다
+    >, <, >=, <=        : 대소비교
+    IS NULL             : NULL인지 확인
+    IS NOT NULL         : NULL이 아닌지 확인
+    
+    NOT                 : 부정연산자
+    AND                 : 그리고
+    OR                  : 또는
+    BETWEEN A AND B     : A와 B사이
+    IN, NOT IN          : 포함되는지 확인
+    
+    LIKE, NOT LIKE      : 문자 한글자
+    %                   : 0개 이상의 문자열
+    _                   : 한 글자
+
+
+```sql
+CREATE TABLE TEMP_TB(
+    NAME    VARCHAR2(100),
+    AGE     NUMBER
+    );
+    
+INSERT INTO TEMP_TB VALUES('카리나',24);  
+INSERT INTO TEMP_TB VALUES('아이유',30);
+INSERT INTO TEMP_TB VALUES('에일리',31);
+COMMIT;   
+
+SELECT * FROM TEMP_TB;
+SELECT AGE FROM TEMP_TB;
+SELECT AGE AS 나이 FROM TEMP_TB;
+SELECT AGE 나이 FROM TEMP_TB;
+SELECT NAME, AGE+1 AS 내년나이 FROM TEMP_TB;
+
+SELECT NAME, AGE+1 AS 내년나이, 123 FROM TEMP_TB;
+SELECT NAME, AGE+1 AS 내년나이, AGE/2 AS "내가 만든 칼럼" FROM TEMP_TB;
+SELECT NAME, AGE+1 AS 내년나이, AGE/2 AS 내가만든칼럼 FROM TEMP_TB;
+SELECT NAME, AGE+1 AS 내년나이, 'ZZZ Z' AS 내가만든칼럼 FROM TEMP_TB;
+SELECT NAME, AGE, AGE, AGE FROM TEMP_TB;
+
+--문자열 더하기
+SELECT NAME, AGE FROM TEMP_TB;
+SELECT NAME, AGE, NAME 내가만든칼럼 FROM TEMP_TB; 
+SELECT NAME, AGE, 1+1 FROM TEMP_TB; 
+SELECT NAME+1 FROM TEMP_TB; --안됨.
+SELECT NAME, AGE, 1+'1' FROM TEMP_TB; --숫자+문자 = 숫자
+SELECT NAME, AGE, 1||'1' FROM TEMP_TB; --숫자+문자 = 문자
+SELECT NAME, AGE, 7 내가만든칼럼 FROM TEMP_TB; --숫자는 오른쪽 정렬
+SELECT NAME, AGE, '7' 내가만든칼럼 FROM TEMP_TB; --문자는 왼쪽 정렬
+SELECT NAME, AGE, NAME || 'ZZZ' 내가만든칼럼 FROM TEMP_TB;
+SELECT NAME, AGE, 123 || 'ZZZ' 내가만든칼럼 FROM TEMP_TB;
+SELECT NAME, AGE, CONCAT(NAME, 'ZZZ') 내가만든칼럼 FROM TEMP_TB;
+
+SELECT NAME||'('||AGE||')' AS "이름(나이)" FROM TEMP_TB;
+SELECT SYSDATE FROM TEMP_TB;
+SELECT SYSDATE FROM DUAL;
+
+--연산자 연습
+
+SELECT NAME, AGE FROM TEMP_TB;
+
+SELECT NAME, AGE 
+    FROM TEMP_TB 
+    WHERE AGE = 24;
+    
+SELECT NAME, AGE 
+    FROM TEMP_TB 
+    WHERE AGE != 24;
+ 
+SELECT NAME, AGE 
+    FROM TEMP_TB 
+    WHERE AGE >= 24;
+
+--INSERT INTO TEMP_TB(NAME, AGE) VALUES('SWY', NULL);
+INSERT INTO TEMP_TB (NAME) VALUES ('SWY');
+--ROLLBACK;
+
+SELECT NAME, AGE 
+    FROM TEMP_TB 
+    WHERE AGE >= 24; 
+
+SELECT NAME, AGE
+    FROM TEMP_TB
+    WHERE AGE IS NULL;
+
+SELECT NAME, AGE
+    FROM TEMP_TB
+    WHERE AGE>19 AND AGE<21;
+   
+SELECT NAME, AGE
+    FROM TEMP_TB
+    WHERE AGE <=20 AND AGE >=22;
+   
+SELECT NAME, AGE
+    FROM TEMP_TB
+    WHERE AGE BETWEEN 21 AND 22; 
+    
+SELECT NAME 
+    FROM TEMP_TB
+    WHERE NAME = '아이유';
+
+SELECT NAME 
+    FROM TEMP_TB
+    WHERE NAME = '아이유' OR
+          NAME = '카리나' OR
+          NAME = '에일리';
+
+SELECT NAME 
+    FROM TEMP_TB
+    WHERE NAME IN ('아이유','에일리','카리나');
+    
+SELECT NAME ,AGE
+    FROM TEMP_TB
+    WHERE NAME NOT LIKE '아%유';
+
+INSERT INTO TEMP_TB (NAME) VALUES('장원영');
+INSERT INTO TEMP_TB (NAME) VALUES('카즈하');
+INSERT INTO TEMP_TB (NAME) VALUES('사쿠라');
+INSERT INTO TEMP_TB (NAME) VALUES('사나');
+INSERT INTO TEMP_TB (NAME) VALUES('김채린');
+
+SELECT * FROM TEMP_TB;
+
+SELECT * 
+    FROM TEMP_TB
+    WHERE NAME NOT LIKE '사_';
+
+COMMIT;
+```
