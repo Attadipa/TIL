@@ -4,10 +4,10 @@
 
 2. ALTER - 테이블 변경
 
-  * ADD : 칼럼 추가
-  * RENAME : 칼럼명 변경
-  * MODIFY : 칼럼 타입 변경
-  * DROP : 칼럼삭제
+    * ADD : 칼럼 추가
+    * RENAME : 칼럼명 변경
+    * MODIFY : 칼럼 타입 변경
+    * DROP : 칼럼삭제
 
 3. RENAME - 테이블명 변경
 
