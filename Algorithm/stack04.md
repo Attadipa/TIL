@@ -4,8 +4,8 @@ Stack활용문제
 
 풀이
 
-1.isDigit()사용 고려해보자
-2.char->int 방법 아스키코드이용하여 -48하는 방법도 고려해보자
+1. isDigit()사용 고려해보자
+2. char->int 방법 아스키코드이용하여 -48하는 방법도 고려해보자
 
 ```java
 import java.util.Scanner;
