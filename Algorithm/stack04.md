@@ -22,7 +22,7 @@ public class Main {
 			if(c=='+'||c=='-'||c=='*'||c=='/') {
 				n2 = stack.pop();
 				n1 = stack.pop();
-					 if(c=='+') stack.push(n1+n2);
+				if(c=='+') stack.push(n1+n2);
 				else if(c=='-') stack.push(n1-n2);
 				else if(c=='*') stack.push(n1*n2);
 				else if(c=='/') stack.push(n1/n2);
