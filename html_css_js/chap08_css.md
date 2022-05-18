@@ -3,15 +3,10 @@
 08-1 CSS와 박스모델
 
   블록레벨 요소 : 삽입시 혼자 한 줄 차지
-
   인라인 요소 : 한 줄에 다른 요소 올 수 있음
-
   박스모델 기본 구성 : contents, padding, border, margin
-
   콘텐츠 영역 크기 지정 : width(너비), height(높이)
-
   box-sizing : 박스 모델 크기 계산 
-
   box-shadow : 박스 모델 그림자 효과
 
 ​
@@ -19,15 +14,10 @@
 08-2 테두리 스타일 지정하기
 
   적용순서 : top -> right -> bottom -> left
-
   border-style : 테두리 스타일 지정
-
   border-width : 테두리 두께 지정
-
   border-color : 테두리 색상
-
   border : 테두리 스타일 묶어서 지정
-
   border-radius : 둥근 테두리
 
 ​
@@ -35,7 +25,6 @@
 08-3 여백을 조절하는 속성
 
   주의사항 : 마진중첩
-
   마진과 마진이 만날때 마진값이 큰 쪽으로 겹쳐짐
 
 ​
@@ -43,17 +32,16 @@
 08-4 웹 문서의 레이아웃 만들기
 
   display : 배치방법 결정(inline, block, inline-block, none)
-
   float : 띄우기(left, right, none)
-
   clear : float속성 해제
+
 
 
 08-5 웹 요소의 위치 지정하기
 
   left, right, top, bottom : 기준위치와 요소 사이에 상하좌우 얼마나 떨어져 있는지 지정
-
   porition : 배치방법 지정
+
 
 ```html
 <!DOCTYPE html>
