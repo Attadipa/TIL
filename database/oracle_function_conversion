@@ -1,0 +1,18 @@
+# 함수(형변환 관련)
+
+```sql
+-- TO_DATE : DATE로
+SELECT TO_DATE('22/05/17')
+FROM DUAL;
+
+-- TO_CHAR() : 문자로
+SELECT TO_CHAR(SYSDATE, 'YY-MM-DD')
+FROM DUAL;
+
+SELECT TO_CHAR(12345, '999,999,999,999') || '원'
+FROM DUAL;
+
+-- TO_NUMBER() : 숫자로
+SELECT TO_NUMBER('123')
+FROM DUAL;
+```
