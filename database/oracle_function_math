@@ -1,0 +1,29 @@
+# 함수(숫자 관련)
+
+```sql
+-- 함수(숫자)
+
+-- ABS : 절대값
+SELECT ABS(-123), -123
+FROM DUAL;
+
+-- ROUND : 반올림
+SELECT ROUND(3.14, 1), 3.14
+FROM DUAL;
+
+-- TRUNC : 버림
+SELECT TRUNC(10/3), 10/3
+FROM DUAL;
+
+-- MOD : 
+SELECT MOD(12,2), 12
+FROM DUAL;
+
+--POWER : 제곱
+SELECT POWER(12,2), 12
+FROM DUAL;
+
+--SQRT : 제곱근
+SELECT SQRT(12), 12
+FROM DUAL;
+```
