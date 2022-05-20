@@ -18,6 +18,14 @@
     %                   : 0개 이상의 문자열
     _                   : 한 글자
 
+집합연산자
+
+    UNION : 합집합(컬럼 타입, 갯수 일치해야함)
+    INTERSECT : 교집합 출력
+    UNION ALL : 합집합(중복도 출력)
+    MINUS : 차집합
+
+
 
 ```sql
 CREATE TABLE TEMP_TB(
@@ -130,4 +138,30 @@ SELECT *
     WHERE NAME NOT LIKE '사_';
 
 COMMIT;
+
+-- UNION : 합집합(컬럼 타입, 갯수 일치해야함)
+-- 결과집합을 연결해줌(세로 형태로)
+
+SELECT 10 AS A, 20 AS B FROM DUAL
+UNION
+SELECT 50 AS C, 60 AS D FROM DUAL;
+
+SELECT EMPNO 사원번호, ENAME 사원명 FROM EMP
+UNION
+SELECT 7777, 'SWY' FROM DUAL;
+
+--INTERSECT : 교집합 출력
+SELECT EMPNO 사원번호, ENAME 사원명 FROM EMP
+INTERSECT
+SELECT 7777, 'SWY' FROM DUAL;
+
+-- UNION ALL : 합집합(중복도 출력)
+SELECT EMPNO 사원번호, ENAME 사원명 FROM EMP
+UNION ALL
+SELECT 7777, 'SWY' FROM DUAL;
+
+-- MINUS : 차집합
+SELECT EMPNO 사원번호, ENAME 사원명 FROM EMP
+MINUS
+SELECT 7777, 'SWY' FROM DUAL;
 ```
