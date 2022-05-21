@@ -1,6 +1,6 @@
 # 학급회장
 
-HashMap 기본문제
+### 인프런 자바(Java) 알고리즘 문제풀이 : 코딩테스트 대비
 
 ```java
 import java.util.HashMap;
