@@ -10,7 +10,6 @@
 ```java
 import java.util.Scanner;
 
-
 public class Main {
 
 	public static int solution(int n, int m, int[] arr) {
@@ -33,9 +32,8 @@ public class Main {
 					sum=i;
 				}
 			}
-			System.out.println(cnt);
 			if(cnt<=m) {
-				if(cnt==m) answer = size;
+				answer = size;
 				rt=size-1;
 			} else lt=size+1;
 		}
