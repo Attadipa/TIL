@@ -2,75 +2,75 @@
 
 ### 12-1 반응형 웹 알아보기
 
-  다양한 화면 크기에 맞게 웹 디자인이 재배치되고 표시방법이 바뀌는 웹 디자인 방법
+    다양한 화면 크기에 맞게 웹 디자인이 재배치되고 표시방법이 바뀌는 웹 디자인 방법
 
-  뷰포트 : 화면에서 실제 내용이 표시되는 영역
+    뷰포트 : 화면에서 실제 내용이 표시되는 영역
 
-  뷰포트 단위 : vw, vh, vmin, vmax
+    뷰포트 단위 : vw, vh, vmin, vmax
 
 ​
 
 ### 12-2 미디어 쿼리 알아보기
 
-  @media : (미디어쿼리) 사이트에 접속하는 장치에 따라 특정한 css스타일을 사용하는 방법
+    @media : (미디어쿼리) 사이트에 접속하는 장치에 따라 특정한 css스타일을 사용하는 방법
 
 ​
 
 ### 12-3 그리드 레이아웃 알아보기
 
-  웹사이트를 여러 개의 칼럼으로 나눈 후 메뉴나 본문, 이미지 등의 웹 요소를 화면에 맞게 배치하는 것
+    웹사이트를 여러 개의 칼럼으로 나눈 후 메뉴나 본문, 이미지 등의 웹 요소를 화면에 맞게 배치하는 것
 
-  방법
+    방법
 
-  1. 플렉서블 박스 레이아웃
+    1. 플렉서블 박스 레이아웃
 
-  2. CSS 그리드 레이아웃
+    2. CSS 그리드 레이아웃
 
 ​
 
 ### 12-4 플렉스 박스 레이아웃
 
-  display : 플렉스 컨테이너 지정
+    display : 플렉스 컨테이너 지정
 
-  flex-direction : 플렉스 방향 지정
+    flex-direction : 플렉스 방향 지정
 
-  flex-wrap :  플렉스 항목의 줄 바꿈
+    flex-wrap :  플렉스 항목의 줄 바꿈
 
-  flex-flow : 배치방향과 줄 바꿈을 한꺼번에 지정
+    flex-flow : 배치방향과 줄 바꿈을 한꺼번에 지정
 
-  justify-content : 주축 정렬 방법 지정
+    justify-content : 주축 정렬 방법 지정
 
-  align-items : 교차축 정렬 방법 지정
+    align-items : 교차축 정렬 방법 지정
 
-  align-self : 특정 항목만 정렬 방법 지정
+    align-self : 특정 항목만 정렬 방법 지정
 
-  align-content : 여러 줄일 때 교차축 정렬 방법 지정
+    align-content : 여러 줄일 때 교차축 정렬 방법 지정
 
 ​
 
 ### 12-5 CSS 그리드 레이아웃 사용하기
 
-  display  : 그리드 컨테이너 지정
+    display  : 그리드 컨테이너 지정
 
-  grid-template-columns : 칼럼 지정
+    grid-template-columns : 칼럼 지정
 
-  grid-template-rows : 줄 지정
+    grid-template-rows : 줄 지정
 
-  fr : 상대적인 크기 지정
+    fr : 상대적인 크기 지정
 
-  repeat() : 값이 반복될 때 줄여서 표현
+    repeat() : 값이 반복될 때 줄여서 표현
 
-  minmax() : 최솟값과 최댓값 지정
+    minmax() : 최솟값과 최댓값 지정
 
-  auto-fit : 자동으로 칼럼 개수 조절, 남는 공간 꽉 채움
+    auto-fit : 자동으로 칼럼 개수 조절, 남는 공간 꽉 채움
 
-  auto-fill : 자동으로 칼럼 개수 조절, 남는 공간 안 채움
+    auto-fill : 자동으로 칼럼 개수 조절, 남는 공간 안 채움
 
-  grid-column-gap : 칼럼과 칼럼 사이 간격 지정
+    grid-column-gap : 칼럼과 칼럼 사이 간격 지정
 
-  grid-row-gap : 줄과 줄 사이 간격 지정
+    grid-row-gap : 줄과 줄 사이 간격 지정
 
-  grid-gap : 칼럼과 줄 사이의 간격을 한꺼번에 지정
+    grid-gap : 칼럼과 줄 사이의 간격을 한꺼번에 지정
 
 
   ```html
@@ -191,16 +191,6 @@
     <div class="box box3">box3</div>
     <div class="box box4">box4</div>
   </div>
-  <script>
-    alert("안녕하세요");
-    confirm("Hello world");
-    var text = prompt("입력하세요","기본값");
-    var season = ["봄","여름","가을","겨울"];
-    document.write(text);
-    document.write(season);
-    document.write(season[0]);
-    console.log(text + "님을 환영합니다");
-  </script>
 </body>
 </html>
   ```
