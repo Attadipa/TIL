@@ -1,5 +1,6 @@
 # 제약조건
 
+
 ```SQL
 
 --NOT NULL : NULL값 허용하지 않음
