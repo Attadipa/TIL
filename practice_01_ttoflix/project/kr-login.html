@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            background-image: url(/project/resources/ttoflix.jpg);
+            background-size: cover;
+            height: 1300px;   
+        }
+        .main{
+            height: 65%;
+            box-sizing: border-box;
+        }
+        body::before{
+            width: 100%;
+            height: 1300px;
+            content: '';
+            background: linear-gradient(rgba(0, 0, 0, 0.695),rgba(0, 0, 0, 0.438),rgba(0, 0, 0, 0.634));
+            position: absolute;
+            left: 0px;
+        }
+        #ttoflix{
+            width: 200px;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+        #main-center{
+            font-size: 30px;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.735);
+            color: white;
+            position: absolute;
+            width: 450px;
+            height: 660px;
+            top: 43%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            word-break: keep-all;
+            padding: 70px;
+            box-sizing: border-box;
+        }
+        #main-center h1{
+            font-size: 30px;
+        }
+        #main-center > #register01{
+            width: 100%;
+            margin: auto;
+        }
+        #register01 > div{
+            border-radius: 5px;
+            box-sizing: border-box;
+            width: 100%;
+            height: 50px;  
+            margin-bottom: 5%;
+        }
+        input{
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            float: left;
+            border: none;
+            border-radius: 5px;  
+            font-size: 15px;
+            background-color:white;
+            color: black;
+            padding-left: 10px;
+        }
+        input:focus{outline: none;}
+        input::placeholder{color: black;}
+        
+        #submit > input{
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            float: left;
+            background-color: rgb(214, 0, 0);
+            color: white;
+            margin-top: 20px;
+        }
+        #sub{
+            font-size: 13px;
+            padding-top: 20px;
+        }
+        #sub-left input{
+            width: 17px;
+            height: 17px;
+            margin: 0 5px 0 0;
+            display: inline-block;
+        }
+        #sub-left input:checked{
+            background-color: red;
+
+        }
+        #sub-right{float: right;}
+        #sub-right a {
+            text-decoration: none;
+            color: white;
+        }
+        #sub-right a:hover {
+            text-decoration: underline;
+            color: white;
+            
+        }
+        #join{
+            margin: 70px 0px 10px 0px;
+            font-size: 15px;
+            color: grey;
+        }
+        #join a{
+            font-size: 17px; 
+            text-decoration: none;
+            color: white;
+        }
+        #join a:hover{
+            text-decoration: underline;
+        }
+        #check{
+            font-size: 12.5px;
+            color: grey;
+        }
+        .blue{
+            color: rgb(0, 91, 201);
+            cursor: pointer;
+            text-decoration: none;
+        }
+        #hidden{display: none;}
+        #check > button{
+            display: inline-block;
+            padding: 0;
+            background-color: transparent;
+            border: 0;
+        }
+        #check > button:focus + #hidden{display: block;}
+        #check > button:focus {color: transparent;}
+        .blue:hover {text-decoration: underline;}
+        #section-etc{
+            color: rgb(255, 255, 255);
+            font-size: 13px;
+            height: 35%;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.751);
+            padding: 30px 0;
+            
+        }
+        #section-etc > .container{
+            height: 100%;
+            width: 90%;
+            max-width: 1000px;
+            box-sizing: border-box;
+            margin: auto;
+        }
+        #section-etc a{
+            text-decoration: none;
+            color: inherit;
+        }
+        #head{
+            font-size: 15px;
+        }
+        #section-etc a:hover{
+            text-decoration: underline;
+        }
+        #section-etc table{
+            width: 100%;
+        }
+        #section-etc td{
+            width: 25%;
+            padding: 10px 0px;
+        }
+        #section-etc select{
+            border: 1px solid rgb(172, 172, 172);
+            border-radius: 5px;
+            width: 120px;
+            height: 50px;
+            background-color: black;
+            color: grey;
+            font-size: 17px;
+        }
+        #section-etc #div-lang{
+            position: relative;
+        }
+        #section-etc img[alt="global"]{
+            width: 3%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 8px;
+        }
+        @media(max-width:750px){
+            body{
+                margin: 0;
+                background-image: none;
+                background-color: black;
+                height: 1100px;
+            }
+            body::before{
+                display: none;
+            }
+            #ttoflix{
+                width: 200px;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+            }
+            .main{
+                border-bottom: 3px solid grey;
+                height: 60%;
+                box-sizing: border-box;
+
+            }
+
+            #main-center{
+                box-sizing:border-box;
+                background: none;
+                font-size: 30px;
+                color: white;
+                position : static;
+                width: 100%;
+                height: fit-content;
+                top:0;
+                left: 0;
+                transform: none;
+                word-break: keep-all;
+                padding: 70px 30px 0 30px;
+                margin: auto;
+
+            }
+            #section-etc{
+                color: grey;
+                font-size: 13px;
+                height: 40%;
+                box-sizing: border-box;
+                background-color: none;
+                padding: 30px 0;
+                
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="main" id="top">
+        <img id="ttoflix" src="/project/resources/ttoflix.png" alt="ttoflix">
+        <div id="main-center">
+            <h1>로그인</h1>
+            <form id="register01" action="register" method="post">
+                <div id="email"><input type="email" name="email"   placeholder="이메일 주소 또는 비밀번호"></div>
+                <div id="password"><input type="password" name="pwd" placeholder="비밀번호"></div>
+                <div id="submit"><input type="submit" value="로그인"></div>
+            </form>
+            <div id="sub">
+                <span id="sub-left">                    <input type="checkbox">로그인 정보 저장
+                </span>
+                <span id="sub-right">
+                    <a href="https://www.netflix.com/kr/LoginHelp">도움이 필요하신가요?</a> 
+                </span>
+            </div>
+            <div id="join">
+                Netflix 회원이 아닌가요? 
+                <a href="">지금 가입하세요.</a> 
+            </div>
+            <div id="check">
+                이 페이지는 Google reCAPTCHA의 보호를 받아 사용자가 로봇이 아님을 확인합니다.
+                <button class="blue">자세히 알아보기</button>
+                <div id="hidden"><br>
+                    Google reCAPTCHA가 수집하는 정보에는 Google <a href="https://policies.google.com/privacy" class="blue">개인정보처리방침</a>과  <a href="https://policies.google.com/terms" class="blue">서비스 약관</a>이 적용되며, 해당 정보는 reCAPTCHA 서비스 제공, 관리 및 개선과 일반적인 보안 유지에 사용됩니다(Google의 개인 맞춤 광고에 사용 안 함).</div>
+            </div>  
+        </div>
+    </section>
+    <section id="section-etc">
+        <div class="container">
+            <div id="head">질문이 있으신가요? 문의 전화: 
+                <a href="">080-001-9587</a> 
+            </div>
+            <table>
+                <br>
+                <tr>
+                    <td>자주 묻는 질문</td>
+                    <td>고객 센터</td>
+                    <td>이용 약관</td>
+                    <td>개인정보</td>
+                </tr>
+                <tr>
+                    <td>쿠키 설정</td>
+                    <td>회사 정보</td>
+                </tr>
+            </table>
+
+            <br>
+            <div id="div-lang">
+                <select name="language" id="lang-switcher" onchange="if(this.value) location.href=(this.value);">
+                    <option>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp한국어</option>
+                    <option value="/project/en.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEnglish</option>
+                </select>
+                <img src="/project/resources/global.png" alt="global"> 
+            </div>
+
+            <br>
+            <div>넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2018-서울종로-0426호 전화번호: 080-001-9587</div>
+            <div>대표: 레지널드 숀 톰프슨</div>
+            <div>이메일 주소: korea@netflix.com</div>
+            <div>주소: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161</div>
+            <div>사업자등록번호: 165-87-00119</div>
+            <div>클라우드 호스팅: Amazon Web Services Inc.</div>
+            <div><a href="">공정거래위원회 웹사이트</a> </div>
+        </div>
+    </section>
+</body>
+</html>
