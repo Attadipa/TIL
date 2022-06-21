@@ -6,7 +6,7 @@
     <style>
         body{
             margin: 0;
-            background-image: url(/project/resources/ttoflix.jpg);
+            background-image: url(../project/resources/ttoflix.jpg);
             background-size: cover;
             height: 1300px;   
         }
@@ -36,7 +36,7 @@
             position: absolute;
             width: 450px;
             height: 660px;
-            top: 43%;
+            top: 46%;
             left: 50%;
             transform: translate(-50%,-50%);
             word-break: keep-all;
@@ -159,6 +159,8 @@
         }
         #head{
             font-size: 15px;
+            font-weight: 800;
+            
         }
         #section-etc a:hover{
             text-decoration: underline;
@@ -243,28 +245,28 @@
 </head>
 <body>
     <section class="main" id="top">
-        <img id="ttoflix" src="/project/resources/ttoflix.png" alt="ttoflix">
+        <a href="../project/en.html"><img id="ttoflix" src="../project/resources/ttoflix.png" alt="ttoflix"></a>
         <div id="main-center">
-            <h1>로그인</h1>
-            <form id="register01" action="register" method="post">
-                <div id="email"><input type="email" name="email"   placeholder="이메일 주소 또는 비밀번호"></div>
-                <div id="password"><input type="password" name="pwd" placeholder="비밀번호"></div>
-                <div id="submit"><input type="submit" value="로그인"></div>
+            <h1>Sign In</h1>
+            <form id="register01" action="../project/kr.html" method="get">
+                <div id="email"><input type="email" name="email"   placeholder="Email for phone number"></div>
+                <div id="password"><input type="password" name="pwd" placeholder="Password"></div>
+                <div id="submit"><input type="submit" value="Sign In"></div>
             </form>
             <div id="sub">
-                <span id="sub-left">                    <input type="checkbox">로그인 정보 저장
+                <span id="sub-left">                    <input type="checkbox">Remember me
                 </span>
                 <span id="sub-right">
-                    <a href="https://www.netflix.com/kr/LoginHelp">도움이 필요하신가요?</a> 
+                    <a href="https://www.netflix.com/kr/LoginHelp">Need help?</a> 
                 </span>
             </div>
             <div id="join">
-                Netflix 회원이 아닌가요? 
-                <a href="">지금 가입하세요.</a> 
+                New to Netflix?
+                <a href="">Sign up now.</a> 
             </div>
             <div id="check">
-                이 페이지는 Google reCAPTCHA의 보호를 받아 사용자가 로봇이 아님을 확인합니다.
-                <button class="blue">자세히 알아보기</button>
+                This page is protected by Google reCAPTCHA to ensure you're not a bot.
+                <button class="blue">Learn more.</button>
                 <div id="hidden"><br>
                     Google reCAPTCHA가 수집하는 정보에는 Google <a href="https://policies.google.com/privacy" class="blue">개인정보처리방침</a>과  <a href="https://policies.google.com/terms" class="blue">서비스 약관</a>이 적용되며, 해당 정보는 reCAPTCHA 서비스 제공, 관리 및 개선과 일반적인 보안 유지에 사용됩니다(Google의 개인 맞춤 광고에 사용 안 함).</div>
             </div>  
@@ -272,40 +274,40 @@
     </section>
     <section id="section-etc">
         <div class="container">
-            <div id="head">질문이 있으신가요? 문의 전화: 
+            <div id="head">Questions? Call
                 <a href="">080-001-9587</a> 
             </div>
             <table>
                 <br>
                 <tr>
-                    <td>자주 묻는 질문</td>
-                    <td>고객 센터</td>
-                    <td>이용 약관</td>
-                    <td>개인정보</td>
+                    <td>FAQ</td>
+                    <td>Help Center</td>
+                    <td>Terms of Use</td>
+                    <td>Privacy</td>
                 </tr>
                 <tr>
-                    <td>쿠키 설정</td>
-                    <td>회사 정보</td>
+                    <td>Cookie Preferences</td>
+                    <td>Corporate Information</td>
                 </tr>
             </table>
 
             <br>
             <div id="div-lang">
                 <select name="language" id="lang-switcher" onchange="if(this.value) location.href=(this.value);">
-                    <option>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp한국어</option>
-                    <option value="/project/en.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEnglish</option>
+                    <option value="">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEnglish</option>
+                    <option value="/project/kr.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp한국어</option>
                 </select>
-                <img src="/project/resources/global.png" alt="global"> 
+                <img src="../project/resources/global.png" alt="global"> 
             </div>
 
             <br>
-            <div>넷플릭스서비시스코리아 유한회사 통신판매업신고번호: 제2018-서울종로-0426호 전화번호: 080-001-9587</div>
-            <div>대표: 레지널드 숀 톰프슨</div>
-            <div>이메일 주소: korea@netflix.com</div>
-            <div>주소: 대한민국 서울특별시 종로구 우정국로 26, 센트로폴리스 A동 20층 우편번호 03161</div>
-            <div>사업자등록번호: 165-87-00119</div>
-            <div>클라우드 호스팅: Amazon Web Services Inc.</div>
-            <div><a href="">공정거래위원회 웹사이트</a> </div>
+            <div>Netflix Services Korea Ltd. E-Commerce Registration Number: Je 2018-Seoul Jong-ro-0426 Ho. Phone: 080-001-9588</div>
+            <div>Representative: Reginald Shawn Thompson</div>
+            <div>Email: korea@netflix.com</div>
+            <div>Address: 20F, Tower A, Centropolis Building 26, Ujeongguk-ro, Jongno-gu, Seoul, 03161 Republic of Korea</div>
+            <div>Business registration number: 165-87-00119</div>
+            <div>Hosted by: Amazon Web Services Inc.</div>
+            <div><a href="">KFTC website</a> </div>
         </div>
     </section>
 </body>

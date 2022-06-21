@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            height: 1100px;
+            margin: 0;
+        }
+        section{
+            box-sizing: border-box;
+        }
+        #header{
+            border-bottom: 1px solid rgb(226, 226, 226);
+            height: 8%;
+            position: relative;
+
+        }
+        #header img {
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 20px;
+        }
+        #header h3 {
+            position: absolute;
+            top: 10%;
+            color: rgb(50, 50, 50);
+            right: 20px;
+        }
+        #main{
+            height: 60%;
+            position: relative;
+            padding: 30px;
+        }
+        #main form{
+            color: rgb(75, 75, 75);
+            position: absolute;
+            width: 430px;
+            height: 90%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        form > #stage{
+            font-size: 13px;
+            font-weight: 800;
+        }
+        form > #welcome{
+            font-size: 30px;
+            font-weight: 800;
+            width: 75%;
+            color: rgb(70, 70, 70);
+        }
+        form > input{
+            width: 100%;
+            height: 60px;
+            box-sizing: border-box;
+            margin: 20px 0px;
+        }
+        form > #forget-pwd{
+            color: rgb(0, 89, 255);
+        }
+        form > #submit{
+            background-color: rgb(230, 0, 0);
+            color: white;
+            font-size: 25px;
+            border: 0;
+            border-radius: 3px;
+            box-shadow:rgb(199, 199, 199) 1px 1px;
+
+        }
+        #footer{
+            height: 32%;
+            font-size: 12px;
+            background-color: rgb(241, 241, 241);
+            color: rgb(110, 110, 110);
+        }
+        #footer > .container{
+            height: 100%;
+            width: 90%;
+            max-width: 1000px;
+            box-sizing: border-box;
+            margin: auto;
+            padding: 25px 0px;
+        }
+        #footer a{
+            text-decoration: none;
+            color: inherit;
+        }
+        #head{
+            font-size: 15px;
+        }
+        #footer a:hover{
+            text-decoration: underline;
+        }
+        #footer table{
+            width: 100%;
+        }
+        #footer td{
+            width: 25%;
+            padding: 10px 0px;
+        }
+        #footer select{
+            border: 1px solid rgb(186, 186, 186);
+            width: 120px;
+            height: 50px;
+            background-color: white;
+            color: rgb(105, 105, 105);
+            font-size: 17px;
+        }
+        #footer #div-lang{
+            position: relative;
+        }
+        #footer img[alt="global"]{
+            width: 2.5%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 8px;
+        }
+        @media(max-width:600px){
+            #header{
+                border-bottom: 1px solid rgb(226, 226, 226);
+                height: 4%;
+                position: relative;
+
+            }
+            #header img {
+                height: 20px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10px;
+            }
+            #header h3 {
+                font-size: 15px;
+                position: absolute;
+                top: -10%;
+                color: rgb(50, 50, 50);
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="header">
+        <a href="../project/en.html"><img src="../project/resources/ttoflix.png" alt="ttoflix"></a>
+        <a href="../project/en-login.html"><h3>Sign in</h3></a>
+    </section>
+    <section id="main">
+        <form action="">
+            <div id="stage">STEP 1 OF 3</div>
+            <div id="welcome">
+                Welcome back!
+                Joining Netflix is easy.    
+            </div>
+
+            <br>
+
+            <div>Enter your password and you'll be watching in no time.</div>
+
+            <br>
+
+            <div>Email</div>
+            <div style="font-weight : 800">asdf@asdf.com</div>
+            <input type="password" id="pwd" placeholder="Enter your password" >
+            <div id="forget-pwd">Forgot your password?</div>
+            <input type="submit" id="submit" value="Next">
+        </form>
+    </section>
+    <section id="footer">
+        <div class="container">
+            <a href="https://help.netflix.com/ko/contactus"><div id="head">Questions? Contact us.</a>
+            </div>
+            <table>
+                <br>
+                <tr>
+                    <td>FAQ</td>
+                    <td>Help Center</td>
+                    <td>Terms of Use</td>
+                    <td>Privacy</td>
+                </tr>
+                <tr>
+                    <td>Cookie Preferences</td>
+                    <td>Corporate Information</td>
+                </tr>
+            </table>
+
+            <div id="div-lang">
+                <select name="language" id="lang-switcher" onchange="if(this.value) location.href=(this.value);">
+                    <option value="">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEnglish</option>
+                    <option value="../project/kr.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp한국어</option>
+                </select>
+                <img src="../project/resources/global_black.png" alt="global"> 
+            </div>
+
+            <br>
+            <div>Netflix Services Korea Ltd. E-Commerce Registration Number: Je 2018-Seoul Jong-ro-0426 Ho. Phone: 080-001-9588</div>
+            <div>Representative: Reginald Shawn Thompson</div>
+            <div>Email: korea@netflix.com</div>
+            <div>Address: 20F, Tower A, Centropolis Building 26, Ujeongguk-ro, Jongno-gu, Seoul, 03161 Republic of Korea</div>
+            <div>Business registration number: 165-87-00119</div>
+            <div>Hosted by: Amazon Web Services Inc.</div>
+            <div><a href="">KFTC website</a> </div>
+        </div>
+    </section>
+    
+</body>
+</html>
