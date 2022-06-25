@@ -40,6 +40,7 @@ public class Main {
 	public static void union(int a, int b, int cost) {
 		int fa = find(a);
 		int fb = find(b);
+		
 		if(fa!=fb) {
 			unf[fa] = fb;
 			answer+=cost;
