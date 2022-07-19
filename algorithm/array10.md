@@ -12,7 +12,7 @@ public class Main {
     	int answer = 0;
     	for(int i = 1 ; i<=n ; i++) {
     		for(int j = 1 ; j<=n ; j++) {
-    			int cnt = 0;
+    			boolean isMent = true;
     			for(int k = 1 ; k<=m ; k++) {
         			int ranki = 0;
         			int rankj = 0;
@@ -20,11 +20,12 @@ public class Main {
 	        			if(arr[k][s]==i) ranki = s;
 	        			if(arr[k][s]==j) rankj = s;
         			}
-        			if(ranki<rankj) {
-        				cnt++;
+        			if(ranki>=rankj) {
+        				isMent = false;
+        				break;
         			}
         		}
-    			if(cnt == m) answer++;
+    			if(isMent) answer++;
     		}
     	}
         return answer;
