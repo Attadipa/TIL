@@ -10,7 +10,7 @@
 
 	예를 들어 M=5, N=7 인 모눈종이 위에 <그림 1>과 같이 직사각형 3개를 그렸다면, 그 나머지 영역은 <그림 2>와 같이 3개의 분리된 영역으로 나누어지게 된다.
 
-<img src="https://www.acmicpc.net/upload/images/zzJD2aQyF5Rm4IlOt.png" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br/>
+<img src="https://www.acmicpc.net/upload/images/zzJD2aQyF5Rm4IlOt.png"></img><br/>
 
 	<그림 2>와 같이 분리된 세 영역의 넓이는 각각 1, 7, 13이 된다.
 
