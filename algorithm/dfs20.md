@@ -13,10 +13,10 @@
 	지도를 입력하여 단지수를 출력하고, 각 단지에 속하는 집의 수를 오름차순으로 정렬하여 
 	출력하는 프로그램을 작성하시오.
 
-	<img src="https://www.acmicpc.net/upload/images/ITVH9w1Gf6eCRdThfkegBUSOKd.png" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="image"></img><br/>
-	
-![Alt text](![Alt text](https://www.acmicpc.net/upload/images/ITVH9w1Gf6eCRdThfkegBUSOKd.png)
-)
+	![Alt text](https://www.acmicpc.net/upload/images/ITVH9w1Gf6eCRdThfkegBUSOKd.png)
+
+
+
 
 
 ### 입력
