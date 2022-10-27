@@ -70,12 +70,19 @@
 
 
 
-### 내 풀이
+### 내 풀이(시간초과 문제때문에 check배열 적극활용해야함)
 
 ```java
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class Main{
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main{
@@ -87,33 +94,23 @@ public class Main{
 	public static char[][] graph;
 	public static int[][] check;
 	
-	
-	public static void move(int row, int col) {
-		int[][] path = new int[n][m];
-		int i = row;
-		int j = col;
-		while(true) {
-			path[i][j]=1;
-			if(graph[i][j]=='U') i--;
-			else if(graph[i][j]=='R') j++;
-			else if(graph[i][j]=='D') i++;
-			else if(graph[i][j]=='L') j--;
-			
-			if(i<0 || i>=n || j<0 || j>=m) {
-				cnt++;
-				check[row][col]=7;
-				return;
-			}
-			if(check[row][col]==7) {
-				cnt++;
-				return;
-			}
-			if(path[i][j]==1 || path[i][j]==-1) {
-				check[row][col]=-1;
-				return;
-			}
+	public static boolean move(int i, int j) {
+		if(i<0 || i>=n || j<0 || j>=m || check[i][j]==7) {
+			cnt++;
+			return true;	
 		}
-		
+		if(check[i][j]==1 || check[i][j]==-1) {
+			return false;
+		}
+		else {
+			check[i][j]=1;
+			if(graph[i][j]=='U') check[i][j] = move(i-1,j) ? 7 : -1;
+			else if(graph[i][j]=='R') check[i][j] = move(i,j+1) ? 7 : -1;
+			else if(graph[i][j]=='D') check[i][j] = move(i+1,j) ? 7 : -1;
+			else if(graph[i][j]=='L') check[i][j] = move(i,j-1) ? 7 : -1;
+			
+			return check[i][j] == 7 ? true : false;
+		}
 	}
 	
 	public static void main(String[] args) throws Exception{
@@ -134,12 +131,6 @@ public class Main{
 		}
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
-				if(check[i][j]==7) {
-					cnt++;
-					continue;
-				}else if(check[i][j]==-1) {
-					continue;
-				}
 				move(i,j);
 			}
 		}
@@ -148,6 +139,7 @@ public class Main{
 		
 	}
 }
+
 
 
 ```
