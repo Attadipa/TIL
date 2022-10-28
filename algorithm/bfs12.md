@@ -110,7 +110,7 @@ class Node{
 
 public class Main{
 	
-	public static int n,m,drow,dcol,srow,scol;
+	public static int n,m,srow,scol;
 	public static int[] dx = {1,-1,0,0};
 	public static int[] dy = {0,0,1,-1};
 	
@@ -183,10 +183,6 @@ public class Main{
 				if(graph[i][j]=='S') {
 					srow = i;
 					scol = j;
-				}
-				else if(graph[i][j]=='D') {
-					drow = i;
-					dcol = j;
 				}
 				else if(graph[i][j]=='*') {
 					list.add(new Node(i,j,0));
